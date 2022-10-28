@@ -1,8 +1,11 @@
 <!-- Nav tabs -->
 
-<nav class="navbar navbar-dark bg-dark navbar-expand-lg rounded">
+<nav class="navbar navbar-dark bg-dark navbar-expand-xl rounded">
     <div class="container-fluid">
+        <div>
         <a class="navbar-brand <?php parDefaut() ?>" href="index.php">Accueil</a>
+        <a class="navbar-brand <?php parDefaut() ?>" href="Sport.php">Sport</a>
+        </div>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
             data-bs-target="#navbarNavAltMarkup"
             aria-controls="navbarNavAltMarkup" aria-expanded="false"

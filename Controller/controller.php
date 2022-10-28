@@ -13,6 +13,11 @@ function connexion()
     
     require 'views/Connexion.php';
 }
+function sport()
+{
+    
+    require 'views/Sport.php';
+}
 
 function seDeconnecter()
 {
@@ -39,8 +44,8 @@ function seConnecter()
     require "models/ManagerUtilisateur.php";
     
     $managerUtilisateur = new ManagerUtilisateur(); 
-    $membresVerifier = $managerUtilisateur->verifie($_SESSION['infoUtilisateur']["Username"],$_SESSION['infoUtilisateur']["Password"]);
-    
+    $membresVerifier = $managerUtilisateur->verifieUtilisateur($_SESSION['infoUtilisateur']["Username"],$_SESSION['infoUtilisateur']["Password"]);
+
     
     if($membresVerifier == true){
             $_SESSION['connexion'] = "true";

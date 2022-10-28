@@ -1,11 +1,11 @@
 <?php
 
-require "Models/ManagerConnexion.php"; // On pourra utiliser la connexion
+require "Models/ManagerConnexion.php"; 
 
-// Hérite de la classe Manager
+
 class ManagerUtilisateur extends Manager
 {
-    // Retourne la liste des provinces triés par nom de province
+    
     public function getAllUsers()
     {
         $sql = "SELECT *
@@ -16,7 +16,7 @@ class ManagerUtilisateur extends Manager
         return $membres;
     }
 
-    public function verifie($username, $password){
+    public function verifieUtilisateur($username, $password){
       $sql = "SELECT *
       FROM tbl_membre
       WHERE username = :username
@@ -24,7 +24,6 @@ class ManagerUtilisateur extends Manager
      
       $membres = $this::getConnexion()->prepare($sql);
       $membres->bindparam('username', $username, pdo::PARAM_STR);
-      // $membres->bindparam('password', $password, pdo::PARAM_STR);
       $membres->execute();
       $resulat = $membres->fetch();
         if(password_verify($password, $resulat[1])){
@@ -35,5 +34,26 @@ class ManagerUtilisateur extends Manager
         }
     }
 
+    public function ajoutNouveauMembre(){
+
+    }
+    public function supprimeMembres(){
+      
+    }
+    public function ajoutNouveauSport(){
+      
+    }
+
+    public function SuppressionSport(){
+      
+    }
+
+    public function ajoutNouvelleCategorie(){
+      
+    }
+
+    public function suppressionCategorie(){
+      
+    }
    
 }
