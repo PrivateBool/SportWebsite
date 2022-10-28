@@ -4,7 +4,7 @@
     <div class="container-fluid">
         <div>
         <a class="navbar-brand <?php parDefaut() ?>" href="index.php">Accueil</a>
-        <a class="navbar-brand <?php parDefaut() ?>" href="Sport.php">Sport</a>
+        <a class="navbar-brand <?php parDefaut() ?>" href="views/Sport.php">Sport</a>
         </div>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
             data-bs-target="#navbarNavAltMarkup"

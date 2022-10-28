@@ -10,18 +10,16 @@ function accueil()
 
 function connexion()
 {
-    
     require 'views/Connexion.php';
 }
 function sport()
 {
-    
     require 'views/Sport.php';
+    // affiche la page des sport disponible
 }
 
 function seDeconnecter()
-{
-    
+{-
     session_unset(); 
     require 'views/Accueil.php';
     // Faites votre déconnexion, puis rediriger vers l'accueil
@@ -57,8 +55,7 @@ function seConnecter()
     }
         
         
-        
-    }
+}
  
    
     
