@@ -58,7 +58,7 @@
     </div>
 </form>
 
-<script src="js/validationFormulaire.js"></script>
+<script src="js/Validation.js"></script>
 
 <?php $contenu = ob_get_clean();?>
 
