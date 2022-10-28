@@ -1,6 +1,6 @@
 <?php
 
-require "models/Manager.php"; // On pourra utiliser la connexion
+require "Models/ManagerConnexion.php"; // On pourra utiliser la connexion
 
 // Hérite de la classe Manager
 class ManagerUtilisateur extends Manager
