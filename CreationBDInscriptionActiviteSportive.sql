@@ -63,7 +63,7 @@ CREATE TABLE BD_inscription_activite_sportive. tbl_inscriptions(
 #------------------------------------------------------------
 # Ajout valeurs tbl_utilisateur
 #------------------------------------------------------------
-
+#------------------------------------------------------------
 insert into BD_inscription_activite_sportive.tbl_utilisateur
 (nom, motDePasse)
 values
