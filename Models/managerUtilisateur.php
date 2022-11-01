@@ -9,8 +9,8 @@ class ManagerUtilisateur extends Manager
     public function getAllUsers()
     {
         $sql = "SELECT *
-				FROM tbl_membre
-				ORDER BY username";
+				FROM tbl_utilisateur
+				ORDER BY nom";
         // Exécution directe
         $membres = $this->getConnexion()->query($sql);
         return $membres;
@@ -18,16 +18,20 @@ class ManagerUtilisateur extends Manager
 
     public function verifie($username, $password){
       $sql = "SELECT *
-      FROM tbl_membre
-      WHERE username = :username
-      order by username";
+      FROM tbl_utilisateur
+      WHERE nom = :nom
+      order by nom";
      
       $membres = $this::getConnexion()->prepare($sql);
+<<<<<<< Updated upstream
       $membres->bindparam('username', $username, pdo::PARAM_STR);
       // $membres->bindparam('password', $password, pdo::PARAM_STR);
+=======
+      $membres->bindparam('nom', $username, pdo::PARAM_STR);
+>>>>>>> Stashed changes
       $membres->execute();
       $resulat = $membres->fetch();
-        if(password_verify($password, $resulat[1])){
+        if(password_verify($password, $resulat[motDePasse])){
           return true; 
         }
         else{

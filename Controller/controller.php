@@ -16,7 +16,10 @@ function connexion()
 
 function seDeconnecter()
 {
+<<<<<<< Updated upstream
     
+=======
+>>>>>>> Stashed changes
     session_unset(); 
     require 'views/Accueil.php';
     // Faites votre déconnexion, puis rediriger vers l'accueil
@@ -24,6 +27,8 @@ function seDeconnecter()
 
 function seConnecter()
 {
+    require "models/ManagerUtilisateur.php";
+
     if(empty($_POST['username']) && empty($_POST['password'])){
         // ou vers la page de connexion en cas d'échec.
         return header('Location: index.php?action=connexion');
@@ -31,23 +36,27 @@ function seConnecter()
      // Essayer de connecter l'utilisateur,
     $username = $_POST['username']; 
     $password = $_POST['password']; 
-    if(session_status() == PHP_SESSION_NONE){
-        session_start(); 
-    }
-    $_SESSION['infoUtilisateur'] = ["Username" => $username, "Password" => $password]; 
+   
+    $_SESSION['infoUtilisateur'] = ["username" => $username, "password" => $password]; 
     // puis rediriger ver l'accueil en cas de réussite
-    require "models/ManagerUtilisateur.php";
     
+<<<<<<< Updated upstream
     $managerUtilisateur = new ManagerUtilisateur(); 
     $membresVerifier = $managerUtilisateur->verifie($_SESSION['infoUtilisateur']["Username"],$_SESSION['infoUtilisateur']["Password"]);
     
+=======
+>>>>>>> Stashed changes
     
+    $managerUtilisateur = new ManagerUtilisateur(); 
+    $membresVerifier = $managerUtilisateur->verifieUtilisateur($_SESSION['infoUtilisateur']["username"],$_SESSION['infoUtilisateur']["password"]);
+  
     if($membresVerifier == true){
-            $_SESSION['connexion'] = "true";
+            $_SESSION['connexion'] = "ok";
             return header("location: index.php?action=accueil");
     }
     else{
         $_SESSION['connexion'] = "false";
+<<<<<<< Updated upstream
         header("location: index.php?action=connexion");
     }
         
@@ -60,3 +69,11 @@ function seConnecter()
     
     
    
+=======
+        unset($_SESSION['infoUtilisateur']);
+        unset($_POST['username']);
+        unset($_POST['password']);
+        return header("location: index.php?action=connexion");
+    }       
+}
+>>>>>>> Stashed changes

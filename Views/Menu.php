@@ -2,7 +2,14 @@
 
 <nav class="navbar navbar-dark bg-dark navbar-expand-lg rounded">
     <div class="container-fluid">
+<<<<<<< Updated upstream
         <a class="navbar-brand <?php parDefaut() ?>" href="index.php">Accueil</a>
+=======
+        <div>
+        <a class="navbar-brand <?php parDefaut() ?>" href="index.php?action=accueil">Accueil</a>
+        <a class="navbar-brand <?php parDefaut() ?>" href="index.php?action=sport">Sport</a>
+        </div>
+>>>>>>> Stashed changes
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
             data-bs-target="#navbarNavAltMarkup"
             aria-controls="navbarNavAltMarkup" aria-expanded="false"
@@ -11,24 +18,19 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav ms-auto">
-                <!--  Ajouter le code pour gérer le menu afin qu'il bascule à déconnexion quand la personne est connecté et vice versa   -->
-                <a class="nav-link <?php navClass("connexion");
-                
-                    if(isset($_SESSION['connexion']) && $_SESSION['connexion'] = "false"){
-                        echo "d-lg-none"; 
-                    }
-                ?>"
-                    href="index.php?action=connexion">
-                    Se connecter
-                </a>
-                <a class="nav-link <?php navClass("connexion");
-                    if(!isset($_SESSION['connexion'])){
-                        echo "d-lg-none"; 
-                    }
-                ?>"
+                <?php if(isset($_SESSION['connexion']) && $_SESSION['connexion'] == "ok"){?>
+                    <a class="nav-link <?php navClass("connexion");?>"
                     href="index.php?action=seDeconnecter">
                     Se deconnecter
-                </a>
+                    </a>
+                    <?php }
+                    else{ ?>
+                        <a class="nav-link <?php navClass("connexion");?>"
+                        href="index.php?action=connexion">
+                        Se connecter
+                    </a>
+                    <?php } ?>
+                <!--  Ajouter le code pour gérer le menu afin qu'il bascule à déconnexion quand la personne est connecté et vice versa   -->
             </div>
         </div>
     </div>

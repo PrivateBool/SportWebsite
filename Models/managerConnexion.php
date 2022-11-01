@@ -7,7 +7,7 @@ class Manager
     protected function getConnexion()
     {
         $host = 'localhost'; // Nom de l'hôte
-        $db = 'bd_membreEncryption'; // Le nom de votre bd
+        $db = 'BD_inscription_activite_sportive'; // Le nom de votre bd
         $charset = 'utf8'; // gestion des caractères envoyés au serveur
         $user = 'root'; // le nom d'utilisateur
         $pass = ''; // le mot de passe
