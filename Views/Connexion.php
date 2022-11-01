@@ -13,9 +13,6 @@
         if(isset($_SESSION['connexion']) && $_SESSION['connexion'] = "false"){
             echo $messageErreur; 
         }
-  
-    
-
 ?>
 
 

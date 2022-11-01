@@ -23,12 +23,7 @@ class ManagerUtilisateur extends Manager
       order by nom";
      
       $membres = $this::getConnexion()->prepare($sql);
-<<<<<<< Updated upstream
-      $membres->bindparam('username', $username, pdo::PARAM_STR);
-      // $membres->bindparam('password', $password, pdo::PARAM_STR);
-=======
       $membres->bindparam('nom', $username, pdo::PARAM_STR);
->>>>>>> Stashed changes
       $membres->execute();
       $resulat = $membres->fetch();
         if(password_verify($password, $resulat[motDePasse])){

@@ -16,11 +16,8 @@ function connexion()
 
 function seDeconnecter()
 {
-<<<<<<< Updated upstream
-    
-=======
->>>>>>> Stashed changes
     session_unset(); 
+    session_destroy();
     require 'views/Accueil.php';
     // Faites votre déconnexion, puis rediriger vers l'accueil
 }
@@ -39,14 +36,7 @@ function seConnecter()
    
     $_SESSION['infoUtilisateur'] = ["username" => $username, "password" => $password]; 
     // puis rediriger ver l'accueil en cas de réussite
-    
-<<<<<<< Updated upstream
-    $managerUtilisateur = new ManagerUtilisateur(); 
-    $membresVerifier = $managerUtilisateur->verifie($_SESSION['infoUtilisateur']["Username"],$_SESSION['infoUtilisateur']["Password"]);
-    
-=======
->>>>>>> Stashed changes
-    
+
     $managerUtilisateur = new ManagerUtilisateur(); 
     $membresVerifier = $managerUtilisateur->verifieUtilisateur($_SESSION['infoUtilisateur']["username"],$_SESSION['infoUtilisateur']["password"]);
   
@@ -56,24 +46,9 @@ function seConnecter()
     }
     else{
         $_SESSION['connexion'] = "false";
-<<<<<<< Updated upstream
-        header("location: index.php?action=connexion");
-    }
-        
-        
-        
-    }
- 
-   
-    
-    
-    
-   
-=======
         unset($_SESSION['infoUtilisateur']);
         unset($_POST['username']);
         unset($_POST['password']);
         return header("location: index.php?action=connexion");
     }       
 }
->>>>>>> Stashed changes

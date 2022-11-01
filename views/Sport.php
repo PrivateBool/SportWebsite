@@ -1,5 +1,3 @@
-<<<<<<< Updated upstream
-=======
 <?php $titre = 'Sport';?>
 
 <?php ob_start();?>
@@ -32,4 +30,3 @@
 <?php $contenu = ob_get_clean();?>
 
 <?php require 'Template.php';?>
->>>>>>> Stashed changes

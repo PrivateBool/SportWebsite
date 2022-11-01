@@ -2,14 +2,10 @@
 
 <nav class="navbar navbar-dark bg-dark navbar-expand-lg rounded">
     <div class="container-fluid">
-<<<<<<< Updated upstream
-        <a class="navbar-brand <?php parDefaut() ?>" href="index.php">Accueil</a>
-=======
         <div>
         <a class="navbar-brand <?php parDefaut() ?>" href="index.php?action=accueil">Accueil</a>
         <a class="navbar-brand <?php parDefaut() ?>" href="index.php?action=sport">Sport</a>
         </div>
->>>>>>> Stashed changes
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
             data-bs-target="#navbarNavAltMarkup"
             aria-controls="navbarNavAltMarkup" aria-expanded="false"
