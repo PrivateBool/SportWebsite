@@ -8,6 +8,9 @@ function accueil()
     require 'views/Accueil.php';
 }
 
+function sport(){
+    require 'views/Sport.php';
+}
 function connexion()
 {
     
