@@ -41,7 +41,7 @@ function seConnecter()
     // puis rediriger ver l'accueil en cas de réussite
 
     $managerUtilisateur = new ManagerUtilisateur(); 
-    $membresVerifier = $managerUtilisateur->verifieUtilisateur($_SESSION['infoUtilisateur']["username"],$_SESSION['infoUtilisateur']["password"]);
+    $membresVerifier = $managerUtilisateur->verifierUtilisateur($_SESSION['infoUtilisateur']["username"],$_SESSION['infoUtilisateur']["password"]);
   
     if($membresVerifier == true){
             $_SESSION['connexion'] = "ok";

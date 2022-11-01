@@ -16,7 +16,7 @@ class ManagerUtilisateur extends Manager
         return $membres;
     }
 
-    public function verifie($username, $password){
+    public function verifierUtilisateur($username, $password){
       $sql = "SELECT *
       FROM tbl_utilisateur
       WHERE nom = :nom
